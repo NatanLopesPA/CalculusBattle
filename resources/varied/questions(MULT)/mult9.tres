@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://bsulfsikvqwgs"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_c3ajq"]
+
+[resource]
+script = ExtResource("1_c3ajq")
+question_info = "Se a razão da PA (2, 4, 6...) é 2, qual o dobro da razão?"
+type = 2
+options = Array[String](["2", "4", "8", "6"])
+correct = "4"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

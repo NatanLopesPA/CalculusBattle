@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3frmcsfe6yah"]
+
+[ext_resource type="Script" uid="uid://dcxsrnk8tv36i" path="res://Cenas/InfoCharacters/InfoCharactersDIVMULT/info_characters_divmult.gd" id="1_i8pxf"]
+[ext_resource type="Texture2D" uid="uid://ds2yrwf83y72b" path="res://Assets Calculus Battle/SheetCharacter/Kurt Gödel.png" id="2_tgkfd"]
+[ext_resource type="Texture2D" uid="uid://2q6exey7qohv" path="res://Assets Calculus Battle/SheetCharacter/SheetCharacter.png" id="4_b75yg"]
+[ext_resource type="AudioStream" uid="uid://bsaanl62fklmc" path="res://Assets Calculus Battle/Audio/Typing-Sound-Effect-_no-copyright_.mp3" id="4_v3e4d"]
+[ext_resource type="AudioStream" uid="uid://cgagq65a1k58b" path="res://Assets Calculus Battle/Audio/Undertale-Papyrus-Theme-Song-Bonetrousle.mp3" id="5_3ovli"]
+
+[node name="InfoCharactersDIVMULT" type="CanvasLayer"]
+script = ExtResource("1_i8pxf")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+position = Vector2(76.008, 116)
+scale = Vector2(0.16302174, 0.13888888)
+texture = ExtResource("2_tgkfd")
+
+[node name="SheetCharacter" type="Sprite2D" parent="."]
+position = Vector2(75.99999, 112.058)
+scale = Vector2(0.15049508, 0.35764217)
+texture = ExtResource("4_b75yg")
+
+[node name="Story" type="Label" parent="."]
+offset_left = 155.0
+offset_top = 1.0
+offset_right = 360.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 8
+text = "Thomas Edison
+O imperador tirânico por trás de tudo.
+Ele não teve sua Centelha roubada;
+Ele que roubou das as Centelhas.
+Ele acredita que toda ordem é uma farsa.
+Acreditando ser o único ser supremo;
+Em um universo de lógica falsa.
+
+Ele se torna O Imperador da Incompletude.
+Viajando pelas linhas temporais;
+Tratando os outros gênios como fantoches. 
+Ele rouba suas \"Centelhas da Ideia\" apenas;
+Para provar que elas são inúteis.
+Tesla o encontra em seu trono flutuante.
+Onde as próprias leis da matemática parecem falhar."
+
+[node name="AudioText" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_v3e4d")
+volume_db = -9.412
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3ovli")
+volume_db = -25.0
+autoplay = true

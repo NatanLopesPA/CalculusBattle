@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://om7fu6q4x5vn"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_i7byr"]
+
+[resource]
+script = ExtResource("1_i7byr")
+question_info = "Por que (2, 4, 8, 16...) NÃO é uma PA?"
+type = 2
+options = Array[String](["Porque os números são pares", "Porque ela dobra em vez de somar o mesmo valor ", "Porque começa com 2", "Porque não tem o número 10"])
+correct = "Porque ela dobra em vez de somar o mesmo valor "
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

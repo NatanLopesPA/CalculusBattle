@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://jwlr0k3nmmys"]
+
+[ext_resource type="Script" uid="uid://dox5qp5g2vef4" path="res://Scripts/controllers/game_controller_add.gd" id="1_55uxk"]
+[ext_resource type="Resource" uid="uid://ch8n54m6tkp7g" path="res://resources/varied/theme varied/theme_variedADD.tres" id="2_bl2ma"]
+[ext_resource type="Texture2D" uid="uid://db7uxr34oe5cr" path="res://Assets Calculus Battle/Background/Greece.png" id="3_ilmpw"]
+[ext_resource type="PackedScene" uid="uid://b6onuhq0fpyyj" path="res://Cenas/main's/ADD/PlayerADD.tscn" id="5_kvclf"]
+[ext_resource type="PackedScene" uid="uid://3jtej1g2va2a" path="res://Cenas/main's/ADD/enemyADD.tscn" id="6_ctsdd"]
+[ext_resource type="AudioStream" uid="uid://drlw48slyk7tu" path="res://Assets Calculus Battle/Audio/Correct-Sound-Effect.mp3" id="7_ilmpw"]
+[ext_resource type="AudioStream" uid="uid://dqfl8oqq8w2lg" path="res://Assets Calculus Battle/Audio/Back-In-Black-_2020-Remaster_-_8-Bit-Tribute-to-AC_DC_-8-Bit-Universe.mp3" id="7_rhd1e"]
+[ext_resource type="AudioStream" uid="uid://dnvd83rpo6wy1" path="res://Assets Calculus Battle/Audio/Wrong-Answer-Sound-effect.mp3" id="8_ldom1"]
+
+[sub_resource type="Shortcut" id="Shortcut_lb8y5"]
+
+[sub_resource type="Shortcut" id="Shortcut_ja1os"]
+
+[sub_resource type="Shortcut" id="Shortcut_qns0q"]
+
+[sub_resource type="Shortcut" id="Shortcut_x6di6"]
+
+[node name="mainADD" type="Node" unique_id=265804314 node_paths=PackedStringArray("player_to_attack", "enemy_to_attack")]
+script = ExtResource("1_55uxk")
+quiz = ExtResource("2_bl2ma")
+color_right = Color(0, 1, 0, 1)
+color_wrong = Color(1, 0, 0, 1)
+player_to_attack = NodePath("Player")
+enemy_to_attack = NodePath("Enemy")
+
+[node name="Background" type="Node" parent="." unique_id=1624272408]
+
+[node name="Background0" type="Sprite2D" parent="Background" unique_id=886284446]
+position = Vector2(188, 112)
+scale = Vector2(0.4234234, 0.44799998)
+texture = ExtResource("3_ilmpw")
+metadata/_edit_group_ = true
+
+[node name="Player" parent="." unique_id=237451991 node_paths=PackedStringArray("enemy_target") instance=ExtResource("5_kvclf")]
+position = Vector2(56, 136)
+enemy_target = NodePath("../Enemy")
+
+[node name="Enemy" parent="." unique_id=1154884240 node_paths=PackedStringArray("player_target") instance=ExtResource("6_ctsdd")]
+position = Vector2(304, 136)
+player_target = NodePath("../Player")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1073908840]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=2103084436]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_right = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="QuestionInfo" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1130398612]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="QuestionText" type="Label" parent="CanvasLayer/Control/QuestionInfo" unique_id=575892538]
+clip_contents = true
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "*pergunta*"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="QuestionOptions" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=150186658]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -97.20001
+offset_right = 66.285706
+offset_bottom = 38.799988
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/QuestionOptions" unique_id=462380809]
+layout_mode = 2
+shortcut = SubResource("Shortcut_lb8y5")
+text = "*opçao*"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control/QuestionOptions" unique_id=1856584511]
+layout_mode = 2
+shortcut = SubResource("Shortcut_ja1os")
+text = "*opçao*"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Control/QuestionOptions" unique_id=732382544]
+layout_mode = 2
+shortcut = SubResource("Shortcut_qns0q")
+text = "*opçao*"
+
+[node name="Button4" type="Button" parent="CanvasLayer/Control/QuestionOptions" unique_id=697069976]
+layout_mode = 2
+shortcut = SubResource("Shortcut_x6di6")
+text = "*opçao*"
+
+[node name="GameOver" type="ColorRect" parent="CanvasLayer/Control" unique_id=989508316]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_right = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/GameOver" unique_id=345947398]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_right = 160.0
+offset_bottom = 168.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "VOCÊ PERDEU!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonGO" type="Button" parent="CanvasLayer/Control/GameOver" unique_id=244550815]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -64.0
+offset_right = 112.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Tentar Novamente"
+
+[node name="Victory" type="ColorRect" parent="CanvasLayer/Control" unique_id=489249620]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_right = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Victory" unique_id=917170165]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_right = 160.0
+offset_bottom = 168.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 18
+text = "Você passou dos desafios da Adição
+que tal um pouco mais de desafio?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonVic" type="Button" parent="CanvasLayer/Control/Victory" unique_id=1041736326]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -64.0
+offset_right = 112.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Próximo Nível"
+
+[node name="AudioCorrect" type="AudioStreamPlayer2D" parent="." unique_id=1451259119]
+stream = ExtResource("7_ilmpw")
+volume_db = -10.0
+
+[node name="AudioIncorrect" type="AudioStreamPlayer2D" parent="." unique_id=160801581]
+stream = ExtResource("8_ldom1")
+volume_db = -10.0
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="." unique_id=1172220431]
+stream = ExtResource("7_rhd1e")
+volume_db = -12.0
+autoplay = true
+
+[node name="CharacterDetails" type="Node" parent="." unique_id=455023357]
+
+[node name="QuestionText" type="Label" parent="CharacterDetails" unique_id=1225887725]
+custom_minimum_size = Vector2(0, 30)
+offset_left = 8.0
+offset_top = 168.0
+offset_right = 104.0
+offset_bottom = 198.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Nikola Tesla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestionText2" type="Label" parent="CharacterDetails" unique_id=1221899689]
+custom_minimum_size = Vector2(0, 30)
+offset_left = 266.0
+offset_top = 168.0
+offset_right = 367.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "O Tirano
+dos Ângulos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="enemy_life" from="." to="Enemy" method="_on_main_add_enemy_life"]
+[connection signal="player_life" from="." to="Player" method="_on_main_add_player_life"]
+[connection signal="pressed" from="CanvasLayer/Control/GameOver/ButtonGO" to="." method="_on_button_go_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/GameOver/ButtonGO" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Victory/ButtonVic" to="." method="_on_button_vic_pressed"]

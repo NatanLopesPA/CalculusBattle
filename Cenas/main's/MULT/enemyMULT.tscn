@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://d4bkiognabwuf"]
+
+[ext_resource type="Script" uid="uid://b2fwxuev21tg8" path="res://Scripts/entitys/enemy.gd" id="1_bdb2b"]
+[ext_resource type="Texture2D" uid="uid://ctlpu4qntkxw0" path="res://Assets Calculus Battle/Sprites/Dr. Eggman Sprite.png" id="2_tayrm"]
+[ext_resource type="Texture2D" uid="uid://lc4y86wnsahc" path="res://Assets Calculus Battle/Hearts/heart_animated_2.png" id="3_pst4k"]
+[ext_resource type="Texture2D" uid="uid://3bga50cln5rg" path="res://Assets Calculus Battle/Sprites Icons/Dr. Eggman Sprite Icon.png" id="4_eqljx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f056s"]
+size = Vector2(49, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0mhk"]
+atlas = ExtResource("3_pst4k")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwqu2"]
+atlas = ExtResource("3_pst4k")
+region = Rect2(17, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkb1f"]
+atlas = ExtResource("3_pst4k")
+region = Rect2(34, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wudov"]
+atlas = ExtResource("3_pst4k")
+region = Rect2(51, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js5op"]
+atlas = ExtResource("3_pst4k")
+region = Rect2(68, 0, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mp5xx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0mhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwqu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkb1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wudov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js5op")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=866890724]
+script = ExtResource("1_bdb2b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=949442451]
+position = Vector2(8.25, -12.000004)
+scale = Vector2(1.532258, 1.5172412)
+texture = ExtResource("2_tayrm")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=973185528]
+position = Vector2(8.5, -11.5)
+shape = SubResource("RectangleShape2D_f056s")
+
+[node name="Heart_1Enemy" type="AnimatedSprite2D" parent="." unique_id=850738911]
+position = Vector2(-6, -90)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_2Enemy" type="AnimatedSprite2D" parent="." unique_id=1449206001]
+position = Vector2(18, -90)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_3Enemy" type="AnimatedSprite2D" parent="." unique_id=1025708907]
+position = Vector2(-18, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="EnemyIcon" type="Sprite2D" parent="." unique_id=514387810]
+position = Vector2(51.999996, -76)
+scale = Vector2(0.44444448, 0.4528302)
+texture = ExtResource("4_eqljx")
+flip_h = true
+
+[node name="Heart_4Enemy" type="AnimatedSprite2D" parent="." unique_id=833487039]
+position = Vector2(6, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_5Enemy" type="AnimatedSprite2D" parent="." unique_id=842261611]
+position = Vector2(30, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")

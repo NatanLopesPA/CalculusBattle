@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://qehoi3d4k6ef"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_m5mih"]
+
+[resource]
+script = ExtResource("1_m5mih")
+question_info = "Em uma PA de 5 números, o do meio é 10. Qual a soma de todos os 5?"
+type = 3
+options = Array[String](["40", "50", "60", "100"])
+correct = "50"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

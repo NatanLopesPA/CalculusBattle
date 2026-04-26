@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dyj4v75axq11x"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_nf8in"]
+
+[resource]
+script = ExtResource("1_nf8in")
+question_info = "Se uma sequência é (8, 8, 8, 8...), qual a razão dela?"
+options = Array[String](["0", "8", "1", "Não tem razão"])
+correct = "0"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

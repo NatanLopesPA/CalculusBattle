@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="QuizTheme" load_steps=13 format=3 uid="uid://br5ho1lr0uybr"]
+
+[ext_resource type="Script" uid="uid://ck5qluy7mnfn6" path="res://Scripts/resources/theme.gd" id="1_e8rqj"]
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="2_xnrpy"]
+[ext_resource type="Resource" uid="uid://ddb2p8y5hdo6e" path="res://resources/varied/questions(SUBADD)/subAdd1.tres" id="3_lgfu2"]
+[ext_resource type="Resource" uid="uid://b26pndb4xm3t1" path="res://resources/varied/questions(SUBADD)/subAdd2.tres" id="4_my7ei"]
+[ext_resource type="Resource" uid="uid://dq4f7ig2ymdb2" path="res://resources/varied/questions(SUBADD)/subAdd3.tres" id="5_8u7ps"]
+[ext_resource type="Resource" uid="uid://q6kuq66m56r3" path="res://resources/varied/questions(SUBADD)/subAdd4.tres" id="6_nfohv"]
+[ext_resource type="Resource" uid="uid://cv8tqp24qewrt" path="res://resources/varied/questions(SUBADD)/subAdd5.tres" id="7_vbabx"]
+[ext_resource type="Resource" uid="uid://dk1kxvf7hervn" path="res://resources/varied/questions(SUBADD)/subAdd6.tres" id="8_ar0d4"]
+[ext_resource type="Resource" uid="uid://ree2daxc50wa" path="res://resources/varied/questions(SUBADD)/subAdd7.tres" id="9_l3lwu"]
+[ext_resource type="Resource" uid="uid://csk6t0ajn6mkb" path="res://resources/varied/questions(SUBADD)/subAdd8.tres" id="10_jupu3"]
+[ext_resource type="Resource" uid="uid://dbxsc15lg6o1e" path="res://resources/varied/questions(SUBADD)/subAdd9.tres" id="11_lfbyx"]
+[ext_resource type="Resource" uid="uid://yg53glgjqinx" path="res://resources/varied/questions(SUBADD)/subAdd10.tres" id="12_4hp63"]
+
+[resource]
+script = ExtResource("1_e8rqj")
+theme = Array[ExtResource("2_xnrpy")]([ExtResource("3_lgfu2"), ExtResource("4_my7ei"), ExtResource("5_8u7ps"), ExtResource("6_nfohv"), ExtResource("7_vbabx"), ExtResource("8_ar0d4"), ExtResource("9_l3lwu"), ExtResource("10_jupu3"), ExtResource("11_lfbyx"), ExtResource("12_4hp63")])
+metadata/_custom_type_script = "uid://ck5qluy7mnfn6"

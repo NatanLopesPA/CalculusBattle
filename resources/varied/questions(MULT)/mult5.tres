@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://etvxbgjo1yih"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_vhbca"]
+
+[resource]
+script = ExtResource("1_vhbca")
+question_info = "Qual a razão da PA (1, 1.5, 2, 2.5...)?"
+type = 2
+options = Array[String](["0.5", "1", "0.1", "1.5"])
+correct = "0.5"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

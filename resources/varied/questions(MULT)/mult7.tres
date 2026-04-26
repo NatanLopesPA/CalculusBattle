@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://bc0r1dhmgjncv"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_0ujjb"]
+
+[resource]
+script = ExtResource("1_0ujjb")
+question_info = "A sequência (0, -3, -6, -9...) é uma PA?"
+type = 2
+options = Array[String](["Sim ", "Não, porque é negativa", "Não, porque começa com zero", "Só se a razão for positiva"])
+correct = "Sim "
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

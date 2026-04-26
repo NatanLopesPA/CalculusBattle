@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://buop3jmogfu1q"]
+
+[ext_resource type="Script" uid="uid://wa0wk3p5yrii" path="res://Cenas/InfoCharacters/InfoCharactersADD/info_characters_add.gd" id="1_0y27k"]
+[ext_resource type="Texture2D" uid="uid://bpu4bct1ls0rc" path="res://Assets Calculus Battle/SheetCharacter/Pitágoras.png" id="2_5c7lh"]
+[ext_resource type="AudioStream" uid="uid://bsaanl62fklmc" path="res://Assets Calculus Battle/Audio/Typing-Sound-Effect-_no-copyright_.mp3" id="4_08uef"]
+[ext_resource type="Texture2D" uid="uid://2q6exey7qohv" path="res://Assets Calculus Battle/SheetCharacter/SheetCharacter.png" id="4_vs58c"]
+[ext_resource type="AudioStream" uid="uid://cgagq65a1k58b" path="res://Assets Calculus Battle/Audio/Undertale-Papyrus-Theme-Song-Bonetrousle.mp3" id="5_qo5a3"]
+
+[node name="InfoCharactersADD" type="CanvasLayer"]
+script = ExtResource("1_0y27k")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+position = Vector2(76, 116.00001)
+scale = Vector2(0.18528612, 0.14788733)
+texture = ExtResource("2_5c7lh")
+
+[node name="SheetCharacter" type="Sprite2D" parent="."]
+position = Vector2(76, 112.058)
+scale = Vector2(0.15, 0.358)
+texture = ExtResource("4_vs58c")
+
+[node name="Story" type="Label" parent="."]
+offset_left = 154.0
+offset_top = 18.0
+offset_right = 371.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 8
+text = "Pitágoras
+Sua Centelha da Ideia, foi roubada pelo vilão.
+Sem a ideia do Teorema, a sua mente colapsa
+Se tornando o Tirano dos Ângulos, vendo apenas o caos.
+Uma armadura dourada, grega e divina se manifesta.
+Porém ela é feita de geometria instável;
+Trazendo consigo uma maldição.
+
+Além de distorcer a realidade ao seu redor.
+Ela também machuca o usuário que está usando.
+Nikola Tesla chega para confrontá-lo através da lógica.
+Lutando para trazer de volta a mente do matemático;
+E salvá-lo da própria armadura."
+
+[node name="AudioText" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_08uef")
+volume_db = -9.412
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_qo5a3")
+volume_db = -25.0
+autoplay = true

@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://c0sp5j0whtbbd"]
+
+[ext_resource type="Script" uid="uid://dox5qp5g2vef4" path="res://Scripts/controllers/game_controller_add.gd" id="1_65ds0"]
+[ext_resource type="Resource" uid="uid://pkh6lqf4oc7d" path="res://resources/varied/theme varied/theme_variedMULT.tres" id="2_65ds0"]
+[ext_resource type="Texture2D" uid="uid://cghds4pxwq0ve" path="res://Assets Calculus Battle/Background/Fibonacci.png" id="3_bbj8g"]
+[ext_resource type="PackedScene" uid="uid://df63q4h5oedvh" path="res://Cenas/main's/MULT/PlayerMULT.tscn" id="5_pwv7g"]
+[ext_resource type="PackedScene" uid="uid://d4bkiognabwuf" path="res://Cenas/main's/MULT/enemyMULT.tscn" id="6_l4dmg"]
+[ext_resource type="AudioStream" uid="uid://bw4ctb315fglh" path="res://Assets Calculus Battle/Audio/Robotnik-Sonic-the-Hedgehog-OST-Extended_2.mp3" id="7_72mm2"]
+[ext_resource type="AudioStream" uid="uid://drlw48slyk7tu" path="res://Assets Calculus Battle/Audio/Correct-Sound-Effect.mp3" id="7_dws8a"]
+[ext_resource type="AudioStream" uid="uid://dnvd83rpo6wy1" path="res://Assets Calculus Battle/Audio/Wrong-Answer-Sound-effect.mp3" id="8_sksso"]
+
+[sub_resource type="Shortcut" id="Shortcut_lb8y5"]
+
+[sub_resource type="Shortcut" id="Shortcut_ja1os"]
+
+[sub_resource type="Shortcut" id="Shortcut_qns0q"]
+
+[sub_resource type="Shortcut" id="Shortcut_x6di6"]
+
+[node name="mainMULT" type="Node" unique_id=1601836117 node_paths=PackedStringArray("player_to_attack", "enemy_to_attack")]
+script = ExtResource("1_65ds0")
+quiz = ExtResource("2_65ds0")
+color_right = Color(0, 1, 0, 1)
+color_wrong = Color(1, 0, 0, 1)
+player_to_attack = NodePath("Player")
+enemy_to_attack = NodePath("Enemy")
+
+[node name="Background" type="Node" parent="." unique_id=1445595079]
+
+[node name="Background0" type="Sprite2D" parent="Background" unique_id=137843236]
+position = Vector2(188, 115.99999)
+scale = Vector2(0.37600005, 0.21599999)
+texture = ExtResource("3_bbj8g")
+metadata/_edit_group_ = true
+
+[node name="Player" parent="." unique_id=322489370 node_paths=PackedStringArray("enemy_target") instance=ExtResource("5_pwv7g")]
+position = Vector2(56, 136)
+enemy_target = NodePath("../Enemy")
+
+[node name="Enemy" parent="." unique_id=601163862 node_paths=PackedStringArray("player_target") instance=ExtResource("6_l4dmg")]
+position = Vector2(304, 136)
+player_target = NodePath("../Player")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1592388436]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=234897191]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_right = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="QuestionInfo" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=637876308]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="QuestionText" type="Label" parent="CanvasLayer/Control/QuestionInfo" unique_id=1271684435]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "*pergunta*"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="QuestionOptions" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=275557197]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -97.20001
+offset_right = 66.285706
+offset_bottom = 38.799988
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/QuestionOptions" unique_id=75754079]
+layout_mode = 2
+shortcut = SubResource("Shortcut_lb8y5")
+text = "*opçao*"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control/QuestionOptions" unique_id=993052621]
+layout_mode = 2
+shortcut = SubResource("Shortcut_ja1os")
+text = "*opçao*"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Control/QuestionOptions" unique_id=1113882544]
+layout_mode = 2
+shortcut = SubResource("Shortcut_qns0q")
+text = "*opçao*"
+
+[node name="Button4" type="Button" parent="CanvasLayer/Control/QuestionOptions" unique_id=335761353]
+layout_mode = 2
+shortcut = SubResource("Shortcut_x6di6")
+text = "*opçao*"
+
+[node name="GameOver" type="ColorRect" parent="CanvasLayer/Control" unique_id=1797209389]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_right = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/GameOver" unique_id=207601905]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_right = 160.0
+offset_bottom = 168.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "VOCÊ PERDEU!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonGO" type="Button" parent="CanvasLayer/Control/GameOver" unique_id=1690990173]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -64.0
+offset_right = 112.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Tentar Novamente"
+
+[node name="Victory" type="ColorRect" parent="CanvasLayer/Control" unique_id=1763975885]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_right = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Victory" unique_id=1742727273]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_right = 160.0
+offset_bottom = 168.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 17
+text = "Você provou ser um
+Verdadeiro Gênio da Matemática!!
+Você mereceu ir para o último desafio!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonVic" type="Button" parent="CanvasLayer/Control/Victory" unique_id=915639678]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -64.0
+offset_right = 112.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Próximo Nível"
+
+[node name="AudioCorrect" type="AudioStreamPlayer2D" parent="." unique_id=1940291982]
+stream = ExtResource("7_dws8a")
+volume_db = -10.0
+
+[node name="AudioIncorrect" type="AudioStreamPlayer2D" parent="." unique_id=525002702]
+stream = ExtResource("8_sksso")
+volume_db = -10.0
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="." unique_id=825599505]
+stream = ExtResource("7_72mm2")
+volume_db = -13.0
+autoplay = true
+
+[node name="CharacterDetails" type="Node" parent="." unique_id=1809020243]
+
+[node name="QuestionText" type="Label" parent="CharacterDetails" unique_id=1411954886]
+custom_minimum_size = Vector2(0, 30)
+offset_left = 12.0
+offset_top = 168.0
+offset_right = 108.0
+offset_bottom = 198.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Nikola Tesla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestionText2" type="Label" parent="CharacterDetails" unique_id=58858009]
+custom_minimum_size = Vector2(0, 30)
+offset_left = 264.0
+offset_top = 168.0
+offset_right = 360.0
+offset_bottom = 205.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "O Tirano
+da Espiral"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="enemy_life" from="." to="Enemy" method="_on_main_add_enemy_life"]
+[connection signal="player_life" from="." to="Player" method="_on_main_add_player_life"]
+[connection signal="pressed" from="CanvasLayer/Control/GameOver/ButtonGO" to="." method="_on_button_go_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Victory/ButtonVic" to="." method="_on_button_vic_pressed"]

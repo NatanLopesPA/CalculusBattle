@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2bbg2ubdo8vu"]
+
+[ext_resource type="Script" uid="uid://bon85s654hem1" path="res://Cenas/InfoCharacters/InfoCharactersSUBADD/info_characters_subadd.gd" id="1_st77m"]
+[ext_resource type="Texture2D" uid="uid://dk03h8lbc5ik4" path="res://Assets Calculus Battle/SheetCharacter/Nightingale.png" id="2_qelpv"]
+[ext_resource type="Texture2D" uid="uid://2q6exey7qohv" path="res://Assets Calculus Battle/SheetCharacter/SheetCharacter.png" id="4_5f1jf"]
+[ext_resource type="AudioStream" uid="uid://bsaanl62fklmc" path="res://Assets Calculus Battle/Audio/Typing-Sound-Effect-_no-copyright_.mp3" id="4_hj4vh"]
+[ext_resource type="AudioStream" uid="uid://cgagq65a1k58b" path="res://Assets Calculus Battle/Audio/Undertale-Papyrus-Theme-Song-Bonetrousle.mp3" id="5_8ifnv"]
+
+[node name="InfoCharactersSUBADD" type="CanvasLayer"]
+script = ExtResource("1_st77m")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+position = Vector2(72, 116)
+scale = Vector2(0.10666667, 0.09486167)
+texture = ExtResource("2_qelpv")
+
+[node name="SheetCharacter" type="Sprite2D" parent="."]
+position = Vector2(76, 112.058)
+scale = Vector2(0.15, 0.358)
+texture = ExtResource("4_5f1jf")
+
+[node name="Story" type="Label" parent="."]
+offset_left = 154.0
+offset_top = 23.0
+offset_right = 372.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 8
+text = "Florence Nightingale
+Sua \"Centelha da Ideia\" foi roubada pelo vilão.
+Adquirindo uma obsessão fria por um mundo \"perfeito\".
+Se tornando a Tirana da Salvação.
+
+Ela vê o livre-arbítrio e o erro humano como doenças;
+Coisas que precisam ser erradicadas.
+Ela para de curar as pessoas.
+Agora, as controla, apenas para não se machucarem.
+Tesla a encontra observando os seres humanos.
+Ela os observa com um sorriso indecifrável.
+Fazendo de tudo para \"higienizar\" a linha do tempo."
+
+[node name="AudioText" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_hj4vh")
+volume_db = -9.412
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_8ifnv")
+volume_db = -25.0
+autoplay = true

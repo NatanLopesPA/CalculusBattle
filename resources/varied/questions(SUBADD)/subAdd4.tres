@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://q6kuq66m56r3"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_m81dv"]
+
+[resource]
+script = ExtResource("1_m81dv")
+question_info = "Tesla tem 3 patentes e ganha 2 por ano. Quantas terá ao todo daqui a 2 anos?"
+type = 1
+options = Array[String](["5", "6", "7", "8"])
+correct = "7"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

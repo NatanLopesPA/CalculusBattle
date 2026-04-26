@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dnk4sab0yb71w"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_c1dol"]
+
+[resource]
+script = ExtResource("1_c1dol")
+question_info = "Se Tesla tem uma PA onde o primeiro número é 5 e a razão é 3, qual o segundo número?"
+options = Array[String](["8", "15", "10", "2"])
+correct = "8"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

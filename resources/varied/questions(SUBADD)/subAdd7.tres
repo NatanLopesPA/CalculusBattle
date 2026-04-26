@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://ree2daxc50wa"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_hxhad"]
+
+[resource]
+script = ExtResource("1_hxhad")
+question_info = "Se o 1º termo é 5 e o 3º termo é 15, qual é o 2º?"
+type = 1
+options = Array[String](["10", "7", "12", "13"])
+correct = "10"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

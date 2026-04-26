@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dm4f8heqmvc46"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_kxrcy"]
+
+[resource]
+script = ExtResource("1_kxrcy")
+question_info = "Se a razão é 100 e o primeiro número é 100, qual o terceiro?"
+type = 2
+options = Array[String](["200", "300", "500", "400"])
+correct = "300"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

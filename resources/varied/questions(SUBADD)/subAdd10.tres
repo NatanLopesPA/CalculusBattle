@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://yg53glgjqinx"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_1uyqs"]
+
+[resource]
+script = ExtResource("1_1uyqs")
+question_info = "Tesla deu 4 passos: o 1º de 2 metros, o 2º de 4 metros e o 3º de 6 metros. Qual o tamanho do 4º passo?"
+type = 1
+options = Array[String](["7 metros", "8 metros ", "10 metros", "12 metros"])
+correct = "8 metros "
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

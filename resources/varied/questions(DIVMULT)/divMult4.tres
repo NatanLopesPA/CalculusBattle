@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dtaedoyvr65d"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_x6bp6"]
+
+[resource]
+script = ExtResource("1_x6bp6")
+question_info = "Se a razão é 4 e o 2º número é 10, qual o 1º?"
+type = 3
+options = Array[String](["14", "2", "6", "4"])
+correct = "6"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

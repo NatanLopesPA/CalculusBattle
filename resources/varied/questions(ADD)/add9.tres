@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://bwnmr4w1dvt10"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_wrau1"]
+
+[resource]
+script = ExtResource("1_wrau1")
+question_info = "A sequência (50, 100, 150...) aumenta de quanto em quanto?"
+options = Array[String](["10", "100", "50", "25"])
+correct = "50"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

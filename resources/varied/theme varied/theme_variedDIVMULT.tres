@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="QuizTheme" load_steps=13 format=3 uid="uid://dffw81xwmloaq"]
+
+[ext_resource type="Script" uid="uid://ck5qluy7mnfn6" path="res://Scripts/resources/theme.gd" id="1_xx78h"]
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="2_q18yn"]
+[ext_resource type="Resource" uid="uid://qehoi3d4k6ef" path="res://resources/varied/questions(DIVMULT)/divMult1.tres" id="3_xx78h"]
+[ext_resource type="Resource" uid="uid://drdr0a8wcb3fx" path="res://resources/varied/questions(DIVMULT)/divMult2.tres" id="4_q18yn"]
+[ext_resource type="Resource" uid="uid://btu61c0fvb272" path="res://resources/varied/questions(DIVMULT)/divMult3.tres" id="5_uaed6"]
+[ext_resource type="Resource" uid="uid://dtaedoyvr65d" path="res://resources/varied/questions(DIVMULT)/divMult4.tres" id="6_apvpf"]
+[ext_resource type="Resource" uid="uid://drw6p1f1rfp8l" path="res://resources/varied/questions(DIVMULT)/divMult5.tres" id="7_rtywj"]
+[ext_resource type="Resource" uid="uid://dadmpiyemmae4" path="res://resources/varied/questions(DIVMULT)/divMult6.tres" id="8_2x2fy"]
+[ext_resource type="Resource" uid="uid://dj57qchhw4r1f" path="res://resources/varied/questions(DIVMULT)/divMult7.tres" id="9_n5p0d"]
+[ext_resource type="Resource" uid="uid://bocr6k7ws76iu" path="res://resources/varied/questions(DIVMULT)/divMult8.tres" id="10_4eelc"]
+[ext_resource type="Resource" uid="uid://xf8mkj7lbo28" path="res://resources/varied/questions(DIVMULT)/divMult9.tres" id="11_2mhf8"]
+[ext_resource type="Resource" uid="uid://dggdbdak7xes" path="res://resources/varied/questions(DIVMULT)/divMult10.tres" id="12_g2hcr"]
+
+[resource]
+script = ExtResource("1_xx78h")
+theme = Array[ExtResource("2_q18yn")]([ExtResource("3_xx78h"), ExtResource("4_q18yn"), ExtResource("5_uaed6"), ExtResource("6_apvpf"), ExtResource("7_rtywj"), ExtResource("8_2x2fy"), ExtResource("9_n5p0d"), ExtResource("10_4eelc"), ExtResource("11_2mhf8"), ExtResource("12_g2hcr")])
+metadata/_custom_type_script = "uid://ck5qluy7mnfn6"

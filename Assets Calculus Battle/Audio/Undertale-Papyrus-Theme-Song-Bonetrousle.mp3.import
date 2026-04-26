@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgagq65a1k58b"
+path="res://.godot/imported/Undertale-Papyrus-Theme-Song-Bonetrousle.mp3-71715b0c2531e5c6741a0cbadf9c9524.mp3str"
+
+[deps]
+
+source_file="res://Assets Calculus Battle/Audio/Undertale-Papyrus-Theme-Song-Bonetrousle.mp3"
+dest_files=["res://.godot/imported/Undertale-Papyrus-Theme-Song-Bonetrousle.mp3-71715b0c2531e5c6741a0cbadf9c9524.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

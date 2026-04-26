@@ -1,0 +1,116 @@
+[gd_scene load_steps=14 format=3 uid="uid://cxtef7el3q78s"]
+
+[ext_resource type="Script" uid="uid://1sjij61na8ry" path="res://Scripts/ChooseCharacter/choose_character_mult.gd" id="1_m5e5x"]
+[ext_resource type="Texture2D" uid="uid://dlnqxwtlahpko" path="res://Assets Calculus Battle/Background/Background_0.png" id="2_x1n87"]
+[ext_resource type="Texture2D" uid="uid://d0yvbkexxwxwm" path="res://Assets Calculus Battle/Background/Background_1.png" id="3_223sv"]
+[ext_resource type="Shader" uid="uid://cnhorf2de37ik" path="res://Scripts/Shader/choose_characterGRAYSCALE.gdshader" id="4_dkocb"]
+[ext_resource type="Texture2D" uid="uid://cs3v4ny80vhdt" path="res://Assets Calculus Battle/Sprites/Iron Man Sprite.png" id="5_2kaci"]
+[ext_resource type="Texture2D" uid="uid://citdf5xlk0ev3" path="res://Assets Calculus Battle/Sprites/Makima Sprite.png" id="6_fpmk0"]
+[ext_resource type="Shader" uid="uid://wgkwmxf48ct1" path="res://Scripts/Shader/choose_character.gdshader" id="7_0dclm"]
+[ext_resource type="Texture2D" uid="uid://b2ul1pgoycev" path="res://Assets Calculus Battle/Sprites/Freeza Sprite.png" id="8_jcc4i"]
+[ext_resource type="Texture2D" uid="uid://ctlpu4qntkxw0" path="res://Assets Calculus Battle/Sprites/Dr. Eggman Sprite.png" id="9_xnexd"]
+
+[sub_resource type="Shortcut" id="Shortcut_c3tsk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gsrbm"]
+shader = ExtResource("4_dkocb")
+shader_parameter/grayscale_amount = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2dmv"]
+shader = ExtResource("4_dkocb")
+shader_parameter/grayscale_amount = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1afeo"]
+shader = ExtResource("7_0dclm")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/silhouette_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 1.0
+
+[node name="chooseCharacter" type="Node"]
+script = ExtResource("1_m5e5x")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Background0" type="Sprite2D" parent="Background"]
+position = Vector2(188.00002, 111.99999)
+scale = Vector2(0.48958334, 0.5384615)
+texture = ExtResource("2_x1n87")
+metadata/_edit_group_ = true
+
+[node name="Background1" type="Sprite2D" parent="Background/Background0"]
+texture = ExtResource("3_223sv")
+
+[node name="CharacterOptions" type="HBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -63.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Button" type="Button" parent="CharacterOptions"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+shortcut = SubResource("Shortcut_c3tsk")
+text = "Pitágoras"
+
+[node name="Button2" type="Button" parent="CharacterOptions"]
+custom_minimum_size = Vector2(70, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+shortcut = SubResource("Shortcut_c3tsk")
+text = "Nightingale
+"
+
+[node name="Button3" type="Button" parent="CharacterOptions"]
+custom_minimum_size = Vector2(70, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+shortcut = SubResource("Shortcut_c3tsk")
+text = "O Tirano
+da Espiral"
+
+[node name="Button4" type="Button" parent="CharacterOptions"]
+custom_minimum_size = Vector2(70, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+shortcut = SubResource("Shortcut_c3tsk")
+text = "???"
+
+[node name="Character" type="Node" parent="CharacterOptions"]
+
+[node name="IronManSprite" type="Sprite2D" parent="CharacterOptions/Character"]
+material = SubResource("ShaderMaterial_gsrbm")
+position = Vector2(76.25001, 119.99999)
+scale = Vector2(1.8499999, 1.9)
+texture = ExtResource("5_2kaci")
+flip_h = true
+
+[node name="BulmaSprite" type="Sprite2D" parent="CharacterOptions/Character"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_b2dmv")
+position = Vector2(148, 117.5)
+scale = Vector2(0.287, 0.251)
+texture = ExtResource("6_fpmk0")
+flip_h = true
+
+[node name="FreezaSprite" type="Sprite2D" parent="CharacterOptions/Character"]
+material = SubResource("ShaderMaterial_1afeo")
+position = Vector2(306, 116.00001)
+scale = Vector2(1.142857, 1.2272727)
+texture = ExtResource("8_jcc4i")
+flip_h = true
+
+[node name="Dr_EggmanSprite" type="Sprite2D" parent="CharacterOptions/Character"]
+position = Vector2(228, 110)
+scale = Vector2(1.6842105, 1.7142857)
+texture = ExtResource("9_xnexd")
+flip_h = true
+
+[connection signal="pressed" from="CharacterOptions/Button3" to="." method="_on_button_3_pressed"]

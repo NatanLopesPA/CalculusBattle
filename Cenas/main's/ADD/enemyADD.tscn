@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://3jtej1g2va2a"]
+
+[ext_resource type="Script" uid="uid://b2fwxuev21tg8" path="res://Scripts/entitys/enemy.gd" id="1_mp5xx"]
+[ext_resource type="Texture2D" uid="uid://cs3v4ny80vhdt" path="res://Assets Calculus Battle/Sprites/Iron Man Sprite.png" id="2_rk41v"]
+[ext_resource type="Texture2D" uid="uid://lc4y86wnsahc" path="res://Assets Calculus Battle/Hearts/heart_animated_2.png" id="3_f056s"]
+[ext_resource type="Texture2D" uid="uid://x1oy84s5yp8" path="res://Assets Calculus Battle/Sprites Icons/Iron Man ICON.png" id="4_3qfpv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f056s"]
+size = Vector2(49, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0mhk"]
+atlas = ExtResource("3_f056s")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwqu2"]
+atlas = ExtResource("3_f056s")
+region = Rect2(17, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkb1f"]
+atlas = ExtResource("3_f056s")
+region = Rect2(34, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wudov"]
+atlas = ExtResource("3_f056s")
+region = Rect2(51, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js5op"]
+atlas = ExtResource("3_f056s")
+region = Rect2(68, 0, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mp5xx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0mhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwqu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkb1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wudov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js5op")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=894921717]
+script = ExtResource("1_mp5xx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=563449789]
+position = Vector2(8.25, -11.500002)
+scale = Vector2(1.532258, 1.775)
+texture = ExtResource("2_rk41v")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1971370147]
+position = Vector2(8.5, -11.5)
+shape = SubResource("RectangleShape2D_f056s")
+
+[node name="Heart_1Enemy" type="AnimatedSprite2D" parent="." unique_id=1472907469]
+position = Vector2(-6, -90)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_2Enemy" type="AnimatedSprite2D" parent="." unique_id=1424299306]
+position = Vector2(18, -90)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_3Enemy" type="AnimatedSprite2D" parent="." unique_id=231576965]
+position = Vector2(-18, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_4Enemy" type="AnimatedSprite2D" parent="." unique_id=1347260235]
+position = Vector2(6, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_5Enemy" type="AnimatedSprite2D" parent="." unique_id=1918977095]
+position = Vector2(30, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="EnemyIcon" type="Sprite2D" parent="." unique_id=441685005]
+position = Vector2(52.00003, -73.999985)
+scale = Vector2(0.7272727, 0.6666667)
+texture = ExtResource("4_3qfpv")
+flip_h = true

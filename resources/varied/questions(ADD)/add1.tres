@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://bltndt3dn0d4b"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_k0j6f"]
+
+[resource]
+script = ExtResource("1_k0j6f")
+question_info = "Tesla configura uma bobina que aumenta a voltagem na sequência (2, 4, 6, 8...). Qual o próximo valor?"
+options = Array[String](["9", "10", "12", "11"])
+correct = "10"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

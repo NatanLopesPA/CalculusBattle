@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://2dtv0pi3md4d"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_16o6n"]
+
+[resource]
+script = ExtResource("1_16o6n")
+question_info = "Na sequência (5, 10, __, 20), qual número Edison tentou apagar?"
+options = Array[String](["15", "12", "14", "16"])
+correct = "15"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

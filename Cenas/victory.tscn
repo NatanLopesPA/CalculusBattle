@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://2ctfe611vuql"]
+
+[ext_resource type="Script" uid="uid://dbk8eisw4u3b5" path="res://Scripts/victory.gd" id="1_8vihd"]
+[ext_resource type="Texture2D" uid="uid://vdv8hqqik3l3" path="res://Assets Calculus Battle/MainMenu/PlayerVictory.png" id="2_trfl1"]
+[ext_resource type="AudioStream" uid="uid://76yi7g6o5faq" path="res://Assets Calculus Battle/Audio/Takedown.mp3" id="3_h5uoi"]
+[ext_resource type="AudioStream" uid="uid://bsaanl62fklmc" path="res://Assets Calculus Battle/Audio/Typing-Sound-Effect-_no-copyright_.mp3" id="4_trfl1"]
+
+[node name="Victory" type="CanvasLayer"]
+script = ExtResource("1_8vihd")
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(286.33698, 127.58176)
+scale = Vector2(0.15988328, 0.1611834)
+texture = ExtResource("2_trfl1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 168.0
+grow_vertical = 0
+size_flags_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ButtonPlay" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Voltar ao Menu"
+
+[node name="ButtonExit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sair do Jogo"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -186.0
+offset_top = 8.0
+offset_right = 116.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "PARABÉNS!!
+GRAÇAS A SUA AJUDA,
+THOMAS EDISON FOI DERROTADO;
+NIKOLA TESLA ESTA ORGULHOSO,
+PELO SEU DESEMPENHO!!"
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h5uoi")
+volume_db = -16.0
+autoplay = true
+
+[node name="AudioText" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_trfl1")
+volume_db = -9.412
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]

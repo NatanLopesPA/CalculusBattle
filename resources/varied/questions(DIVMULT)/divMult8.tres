@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://bocr6k7ws76iu"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_ir3ub"]
+
+[resource]
+script = ExtResource("1_ir3ub")
+question_info = "O que define uma Progressão Aritmética?"
+type = 3
+options = Array[String](["Multiplicar sempre pelo mesmo número", "Somar sempre o mesmo número", "Ser uma sequência de números pares", "Ter sempre 10 números"])
+correct = "Somar sempre o mesmo número"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

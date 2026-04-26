@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dj57qchhw4r1f"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_vtsv0"]
+
+[resource]
+script = ExtResource("1_vtsv0")
+question_info = "Tesla desce uma escada de 3 em 3 degraus. Se ele está no degrau 10, em qual estará após 2 descidas?"
+type = 3
+options = Array[String](["7", "1", "4", "0"])
+correct = "4"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

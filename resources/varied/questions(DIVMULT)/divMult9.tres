@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://xf8mkj7lbo28"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_py502"]
+
+[resource]
+script = ExtResource("1_py502")
+question_info = "39. Se a1=2 e r=2, qual o 10º termo?"
+type = 3
+options = Array[String](["20", "10", "22", "12"])
+correct = "20"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

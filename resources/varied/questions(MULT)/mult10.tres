@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://du04q3jx8pq3l"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_jq5rr"]
+
+[resource]
+script = ExtResource("1_jq5rr")
+question_info = "Se você somar a razão 3 ao número 12, cinco vezes seguidas, onde chega?"
+type = 2
+options = Array[String](["15", "30", "27", "24"])
+correct = "27"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

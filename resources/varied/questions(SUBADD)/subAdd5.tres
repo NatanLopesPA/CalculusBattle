@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://cv8tqp24qewrt"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_ic1qa"]
+
+[resource]
+script = ExtResource("1_ic1qa")
+question_info = "Se o 1º número é 10 e a razão é -2, qual o próximo?"
+type = 1
+options = Array[String](["8", "12", "0", "-2"])
+correct = "8"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

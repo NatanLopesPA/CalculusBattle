@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dk1kxvf7hervn"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_leqpv"]
+
+[resource]
+script = ExtResource("1_leqpv")
+question_info = "Qual o número que fica bem no meio entre 10 e 20 em uma PA?"
+type = 1
+options = Array[String](["14", "15", "12", "16"])
+correct = "15"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

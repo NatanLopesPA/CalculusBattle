@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bwd8g86spbod2"]
+
+[ext_resource type="Script" uid="uid://b2fwxuev21tg8" path="res://Scripts/entitys/enemy.gd" id="1_s05r0"]
+[ext_resource type="Texture2D" uid="uid://b2ul1pgoycev" path="res://Assets Calculus Battle/Sprites/Freeza Sprite.png" id="2_s05r0"]
+[ext_resource type="Texture2D" uid="uid://lc4y86wnsahc" path="res://Assets Calculus Battle/Hearts/heart_animated_2.png" id="3_lfrln"]
+[ext_resource type="Texture2D" uid="uid://b83kdb7pnu70g" path="res://Assets Calculus Battle/Sprites Icons/Freeza Sprite Icon.png" id="4_1durr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f056s"]
+size = Vector2(49, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0mhk"]
+atlas = ExtResource("3_lfrln")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwqu2"]
+atlas = ExtResource("3_lfrln")
+region = Rect2(17, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkb1f"]
+atlas = ExtResource("3_lfrln")
+region = Rect2(34, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wudov"]
+atlas = ExtResource("3_lfrln")
+region = Rect2(51, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js5op"]
+atlas = ExtResource("3_lfrln")
+region = Rect2(68, 0, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mp5xx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0mhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwqu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkb1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wudov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js5op")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1333621992]
+script = ExtResource("1_s05r0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=24446653]
+position = Vector2(12.000001, -7.999997)
+scale = Vector2(1.1428572, 1.2121212)
+texture = ExtResource("2_s05r0")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2015268668]
+position = Vector2(8.5, -11.5)
+shape = SubResource("RectangleShape2D_f056s")
+
+[node name="Heart_1Enemy" type="AnimatedSprite2D" parent="." unique_id=1307249345]
+position = Vector2(-6, -90)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_2Enemy" type="AnimatedSprite2D" parent="." unique_id=1189256832]
+position = Vector2(18, -90)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_3Enemy" type="AnimatedSprite2D" parent="." unique_id=310113400]
+position = Vector2(-18, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="Heart_4Enemy" type="AnimatedSprite2D" parent="." unique_id=1846871060]
+position = Vector2(6, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")
+
+[node name="EnemyIcon" type="Sprite2D" parent="." unique_id=204630750]
+position = Vector2(52, -76)
+scale = Vector2(0.19199999, 0.19200005)
+texture = ExtResource("4_1durr")
+flip_h = true
+
+[node name="Heart_5Enemy" type="AnimatedSprite2D" parent="." unique_id=1270285169]
+position = Vector2(30, -73)
+sprite_frames = SubResource("SpriteFrames_mp5xx")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://04ypo7uipary"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_tk0ib"]
+
+[resource]
+script = ExtResource("1_tk0ib")
+question_info = "No padrão de energia (10, 20, 30...), qual é a \"razão\"?"
+options = Array[String](["5", "20", "10", "1"])
+correct = "10"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

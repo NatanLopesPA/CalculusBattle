@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://lhymmc54yfrg"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_habbi"]
+
+[resource]
+script = ExtResource("1_habbi")
+question_info = "Qual número está \"estragando\" esta PA: (5, 10, 15, 18, 25)?"
+type = 2
+options = Array[String](["10", "15", "18", "25"])
+correct = "18"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

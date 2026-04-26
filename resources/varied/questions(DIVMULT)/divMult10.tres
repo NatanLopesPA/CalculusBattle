@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dggdbdak7xes"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_wc53d"]
+
+[resource]
+script = ExtResource("1_wc53d")
+question_info = "Tesla diz: \"A sequência (3, 6, 9) tem uma soma\". Qual é essa soma?"
+type = 3
+options = Array[String](["15", "18", "21", "12"])
+correct = "18"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://7jhnlyt408f1"]
+
+[ext_resource type="Script" uid="uid://cb6dnpqdbof1w" path="res://Scripts/main_menu.gd" id="1_pfblw"]
+[ext_resource type="Texture2D" uid="uid://qjf1h03ndirk" path="res://Assets Calculus Battle/MainMenu/PlayerMainMenu.png" id="2_bd8gm"]
+[ext_resource type="Texture2D" uid="uid://kas8diiiv334" path="res://Assets Calculus Battle/Background/ass.jpg" id="2_jeejk"]
+[ext_resource type="Texture2D" uid="uid://ck8ryh1o2ncni" path="res://Assets Calculus Battle/MainMenu/EnemyMainMenu.png" id="3_ybyo8"]
+[ext_resource type="Texture2D" uid="uid://cp8a2bahxmh8i" path="res://Assets Calculus Battle/MainMenu/Versus.png" id="4_ch3q6"]
+[ext_resource type="AudioStream" uid="uid://cf4wo3b6i83np" path="res://Assets Calculus Battle/Audio/Golden.mp3" id="4_ybyo8"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1584095285]
+script = ExtResource("1_pfblw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1406682110]
+position = Vector2(186, 111.99999)
+scale = Vector2(0.31666666, 0.33185184)
+texture = ExtResource("2_jeejk")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=2085037627]
+position = Vector2(72.99999, 114.999985)
+scale = Vector2(0.106199674, 0.108477384)
+texture = ExtResource("2_bd8gm")
+
+[node name="Enemy" type="Sprite2D" parent="." unique_id=40867899]
+position = Vector2(313, 120)
+scale = Vector2(0.06724513, 0.08182971)
+texture = ExtResource("3_ybyo8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=492885785]
+anchors_preset = -1
+anchor_left = 0.33333334
+anchor_top = 0.60714287
+anchor_right = 0.6989247
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1165748459]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1607717513]
+layout_mode = 2
+alignment = 1
+
+[node name="ButtonPlay" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1019529762]
+layout_mode = 2
+text = "Começar o Jogo"
+
+[node name="ButtonExit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=310801186]
+layout_mode = 2
+text = "Sair do Jogo"
+
+[node name="Versus" type="Sprite2D" parent="MarginContainer" unique_id=1917153720]
+position = Vector2(88, 0)
+scale = Vector2(0.0829268, 0.078873225)
+texture = ExtResource("4_ch3q6")
+
+[node name="Label" type="Label" parent="." unique_id=142036887]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -97.5
+offset_top = 16.0
+offset_right = 97.5
+offset_bottom = 47.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "CALCULUS BATTLE"
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="." unique_id=921841458]
+stream = ExtResource("4_ybyo8")
+volume_db = -16.0
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]

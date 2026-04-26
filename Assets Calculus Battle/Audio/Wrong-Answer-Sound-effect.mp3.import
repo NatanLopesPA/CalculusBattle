@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnvd83rpo6wy1"
+path="res://.godot/imported/Wrong-Answer-Sound-effect.mp3-c96a26e5f9728b8bc0129524d6e1eaab.mp3str"
+
+[deps]
+
+source_file="res://Assets Calculus Battle/Audio/Wrong-Answer-Sound-effect.mp3"
+dest_files=["res://.godot/imported/Wrong-Answer-Sound-effect.mp3-c96a26e5f9728b8bc0129524d6e1eaab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

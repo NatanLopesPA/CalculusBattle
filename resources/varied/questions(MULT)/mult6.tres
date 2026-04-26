@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://drftj50k11oaq"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_0a0dc"]
+
+[resource]
+script = ExtResource("1_0a0dc")
+question_info = "Se o termo do meio de uma PA de três números é 50 e a razão é 10, quais os outros dois?"
+type = 2
+options = Array[String](["45 e 55", "40 e 60", "49 e 51", "30 e 70"])
+correct = "40 e 60"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

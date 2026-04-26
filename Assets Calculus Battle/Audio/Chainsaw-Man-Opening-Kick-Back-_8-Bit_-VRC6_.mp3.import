@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tf2vcy2gf86"
+path="res://.godot/imported/Chainsaw-Man-Opening-Kick-Back-_8-Bit_-VRC6_.mp3-5635e7fcf21df8c3c9558a130738e9c0.mp3str"
+
+[deps]
+
+source_file="res://Assets Calculus Battle/Audio/Chainsaw-Man-Opening-Kick-Back-_8-Bit_-VRC6_.mp3"
+dest_files=["res://.godot/imported/Chainsaw-Man-Opening-Kick-Back-_8-Bit_-VRC6_.mp3-5635e7fcf21df8c3c9558a130738e9c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

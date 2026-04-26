@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dfc0iufmdy3tq"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_v1n3u"]
+
+[resource]
+script = ExtResource("1_v1n3u")
+question_info = "Se Tesla começa uma contagem no 0 e pula de 7 em 7, qual o segundo número após o zero?"
+options = Array[String](["7", "14", "21", "0"])
+correct = "14"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://c6gjvbci02ql8"]
+
+[ext_resource type="Script" uid="uid://bjj323mo45hr8" path="res://Scripts/ChooseCharacter/choose_character_add.gd" id="1_gjaen"]
+[ext_resource type="Texture2D" uid="uid://dlnqxwtlahpko" path="res://Assets Calculus Battle/Background/Background_0.png" id="2_o17uq"]
+[ext_resource type="Texture2D" uid="uid://d0yvbkexxwxwm" path="res://Assets Calculus Battle/Background/Background_1.png" id="3_v600w"]
+[ext_resource type="Texture2D" uid="uid://cs3v4ny80vhdt" path="res://Assets Calculus Battle/Sprites/Iron Man Sprite.png" id="4_1us82"]
+[ext_resource type="Shader" uid="uid://wgkwmxf48ct1" path="res://Scripts/Shader/choose_character.gdshader" id="5_381pq"]
+[ext_resource type="Texture2D" uid="uid://citdf5xlk0ev3" path="res://Assets Calculus Battle/Sprites/Makima Sprite.png" id="6_utx65"]
+[ext_resource type="Texture2D" uid="uid://b2ul1pgoycev" path="res://Assets Calculus Battle/Sprites/Freeza Sprite.png" id="7_0x3uo"]
+[ext_resource type="Texture2D" uid="uid://ctlpu4qntkxw0" path="res://Assets Calculus Battle/Sprites/Dr. Eggman Sprite.png" id="8_urn61"]
+[ext_resource type="Script" uid="uid://cq5slfnpixu2i" path="res://Cenas/Choose Characters/tutorial_pop_up.gd" id="9_o17uq"]
+[ext_resource type="AudioStream" uid="uid://bsaanl62fklmc" path="res://Assets Calculus Battle/Audio/Typing-Sound-Effect-_no-copyright_.mp3" id="10_v600w"]
+
+[sub_resource type="Shortcut" id="Shortcut_c3tsk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2dmv"]
+shader = ExtResource("5_381pq")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/silhouette_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1afeo"]
+shader = ExtResource("5_381pq")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/silhouette_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gi3ex"]
+shader = ExtResource("5_381pq")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/silhouette_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 1.0
+
+[sub_resource type="FontVariation" id="FontVariation_gjaen"]
+
+[node name="chooseCharacter" type="Node" unique_id=1474048701]
+script = ExtResource("1_gjaen")
+
+[node name="Background" type="Node" parent="." unique_id=234787581]
+
+[node name="Background0" type="Sprite2D" parent="Background" unique_id=618364456]
+position = Vector2(188.00002, 111.99999)
+scale = Vector2(0.48958334, 0.5384615)
+texture = ExtResource("2_o17uq")
+metadata/_edit_group_ = true
+
+[node name="Background1" type="Sprite2D" parent="Background/Background0" unique_id=1432622875]
+texture = ExtResource("3_v600w")
+
+[node name="CharacterOptions" type="HBoxContainer" parent="." unique_id=579294566]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -63.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Button" type="Button" parent="CharacterOptions" unique_id=988578247]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+shortcut = SubResource("Shortcut_c3tsk")
+text = "O Tirano
+dos Ângulos"
+
+[node name="Button2" type="Button" parent="CharacterOptions" unique_id=1469633538]
+custom_minimum_size = Vector2(70, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+shortcut = SubResource("Shortcut_c3tsk")
+text = "???"
+
+[node name="Button3" type="Button" parent="CharacterOptions" unique_id=239984435]
+custom_minimum_size = Vector2(70, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+shortcut = SubResource("Shortcut_c3tsk")
+text = "???"
+
+[node name="Button4" type="Button" parent="CharacterOptions" unique_id=1349245091]
+custom_minimum_size = Vector2(70, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+shortcut = SubResource("Shortcut_c3tsk")
+text = "???"
+
+[node name="Character" type="Node" parent="CharacterOptions" unique_id=1601226168]
+
+[node name="IronManSprite" type="Sprite2D" parent="CharacterOptions/Character" unique_id=1149892576]
+position = Vector2(76.25001, 119.99999)
+scale = Vector2(1.8499999, 1.9)
+texture = ExtResource("4_1us82")
+flip_h = true
+
+[node name="BulmaSprite" type="Sprite2D" parent="CharacterOptions/Character" unique_id=2065106058]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_b2dmv")
+position = Vector2(155, 117.5)
+scale = Vector2(0.287, 0.251)
+texture = ExtResource("6_utx65")
+flip_h = true
+
+[node name="FreezaSprite" type="Sprite2D" parent="CharacterOptions/Character" unique_id=803622]
+material = SubResource("ShaderMaterial_1afeo")
+position = Vector2(310, 116.00001)
+scale = Vector2(1.142857, 1.2272727)
+texture = ExtResource("7_0x3uo")
+flip_h = true
+
+[node name="Dr_EggmanSprite" type="Sprite2D" parent="CharacterOptions/Character" unique_id=1600187783]
+material = SubResource("ShaderMaterial_gi3ex")
+position = Vector2(228, 110)
+scale = Vector2(1.6842105, 1.7142857)
+texture = ExtResource("8_urn61")
+flip_h = true
+
+[node name="TutorialPopUp" type="CanvasLayer" parent="." unique_id=1869714264]
+script = ExtResource("9_o17uq")
+
+[node name="ColorRect" type="ColorRect" parent="TutorialPopUp" unique_id=72259140]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = -112.0
+offset_right = 166.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Panel" type="Panel" parent="TutorialPopUp" unique_id=1801941285]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = -112.0
+offset_right = 166.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TutorialPopUp/Panel" unique_id=309649508]
+layout_mode = 0
+offset_right = 328.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 7
+text = "Nikolas teve todo o conhecimento do mundo roubado por seus inimigo. Agora,
+assumindo a identidade de Tesla, ele inicia uma jornada de duelos mentais para
+ recuperar o que foi perdido.
+Objetivo:
+➢ Derrote 3 inimigos em batalhas de conhecimento até alcançar seu verdadeiro desafio final
+
+Como jogar:
+➢ Cada duelo é um quiz de múltipla escolha com 4 alternativas.
+➢ Escolha a resposta correta para atacar seu inimigo.
+➢ Respostas erradas resultam em dano contra você.
+
+Regras da batalha:
+➢ Você e cada inimigo começam com 5 vidas.
+➢ Vence quem zerar as vidas do oponente primeiro.
+➢ Avance apenas se sobreviver aos duelos."
+
+[node name="Button" type="Button" parent="TutorialPopUp/Panel" unique_id=1934333055]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 184.0
+offset_right = 326.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0.8235294, 0.99607843, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_gjaen")
+theme_override_font_sizes/font_size = 9
+text = "Fechar"
+
+[node name="AudioText" type="AudioStreamPlayer2D" parent="TutorialPopUp" unique_id=1229748554]
+stream = ExtResource("10_v600w")
+
+[connection signal="pressed" from="CharacterOptions/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TutorialPopUp/Panel/Button" to="TutorialPopUp" method="_on_button_pressed"]

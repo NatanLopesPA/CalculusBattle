@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dbxsc15lg6o1e"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_e3d5n"]
+
+[resource]
+script = ExtResource("1_e3d5n")
+question_info = "Somando os 3 primeiros números da sequência (1, 2, 3...), quanto dá?"
+type = 1
+options = Array[String](["5", "7", "3", "6"])
+correct = "6"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

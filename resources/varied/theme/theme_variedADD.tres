@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuizTheme" load_steps=8 format=3 uid="uid://b8ylv478wa243"]
+
+[ext_resource type="Script" uid="uid://ck5qluy7mnfn6" path="res://Scripts/resources/theme.gd" id="1_ctpdy"]
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="2_ah1bk"]
+[ext_resource type="Resource" uid="uid://bltndt3dn0d4b" path="res://resources/varied/questions(ADD)/add1.tres" id="3_qq38k"]
+[ext_resource type="Resource" uid="uid://04ypo7uipary" path="res://resources/varied/questions(ADD)/add2.tres" id="4_6yj8s"]
+[ext_resource type="Resource" uid="uid://8de4cr7jua8k" path="res://resources/varied/questions(ADD)/add3.tres" id="5_526kp"]
+[ext_resource type="Resource" uid="uid://2dtv0pi3md4d" path="res://resources/varied/questions(ADD)/add4.tres" id="6_i2ha7"]
+[ext_resource type="Resource" uid="uid://dfc0iufmdy3tq" path="res://resources/varied/questions(ADD)/add5.tres" id="7_u2s2o"]
+
+[resource]
+script = ExtResource("1_ctpdy")
+theme = Array[ExtResource("2_ah1bk")]([ExtResource("3_qq38k"), ExtResource("4_6yj8s"), ExtResource("5_526kp"), ExtResource("6_i2ha7"), ExtResource("7_u2s2o")])
+metadata/_custom_type_script = "uid://ck5qluy7mnfn6"

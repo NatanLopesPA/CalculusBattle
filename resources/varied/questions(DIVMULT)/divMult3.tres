@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://btu61c0fvb272"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_yjrxu"]
+
+[resource]
+script = ExtResource("1_yjrxu")
+question_info = "Qual o próximo número na sequência decrescente: (99, 88, 77...)?"
+type = 3
+options = Array[String](["76", "66", "55", "60"])
+correct = "66"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

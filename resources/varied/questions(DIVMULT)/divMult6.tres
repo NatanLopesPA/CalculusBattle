@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dadmpiyemmae4"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_yhikj"]
+
+[resource]
+script = ExtResource("1_yhikj")
+question_info = "Se somarmos os números de 1 a 5 (1+2+3+4+5), o resultado é:"
+type = 3
+options = Array[String](["15", "10", "25", "20"])
+correct = "15"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

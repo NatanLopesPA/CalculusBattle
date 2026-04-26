@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://8de4cr7jua8k"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_3syxk"]
+
+[resource]
+script = ExtResource("1_3syxk")
+question_info = "Tesla observa uma queda de energia: (100, 90, 80...). Qual o próximo número?"
+options = Array[String](["75", "60", "85", "70"])
+correct = "70"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

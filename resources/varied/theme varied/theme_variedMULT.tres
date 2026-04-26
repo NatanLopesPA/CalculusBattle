@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="QuizTheme" load_steps=13 format=3 uid="uid://pkh6lqf4oc7d"]
+
+[ext_resource type="Script" uid="uid://ck5qluy7mnfn6" path="res://Scripts/resources/theme.gd" id="1_b7i6x"]
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="2_dg7or"]
+[ext_resource type="Resource" uid="uid://om7fu6q4x5vn" path="res://resources/varied/questions(MULT)/mult1.tres" id="3_o6ywf"]
+[ext_resource type="Resource" uid="uid://dm4f8heqmvc46" path="res://resources/varied/questions(MULT)/mult2.tres" id="4_lhiiy"]
+[ext_resource type="Resource" uid="uid://lhymmc54yfrg" path="res://resources/varied/questions(MULT)/mult3.tres" id="5_yb0lo"]
+[ext_resource type="Resource" uid="uid://b1vjibhndyfkl" path="res://resources/varied/questions(MULT)/mult4.tres" id="6_b2rdw"]
+[ext_resource type="Resource" uid="uid://etvxbgjo1yih" path="res://resources/varied/questions(MULT)/mult5.tres" id="7_mmg7h"]
+[ext_resource type="Resource" uid="uid://drftj50k11oaq" path="res://resources/varied/questions(MULT)/mult6.tres" id="8_cnxe7"]
+[ext_resource type="Resource" uid="uid://bc0r1dhmgjncv" path="res://resources/varied/questions(MULT)/mult7.tres" id="9_vcqbx"]
+[ext_resource type="Resource" uid="uid://2vsapj5gknng" path="res://resources/varied/questions(MULT)/mult8.tres" id="10_kpexq"]
+[ext_resource type="Resource" uid="uid://bsulfsikvqwgs" path="res://resources/varied/questions(MULT)/mult9.tres" id="11_na7y1"]
+[ext_resource type="Resource" uid="uid://du04q3jx8pq3l" path="res://resources/varied/questions(MULT)/mult10.tres" id="12_041iu"]
+
+[resource]
+script = ExtResource("1_b7i6x")
+theme = Array[ExtResource("2_dg7or")]([ExtResource("3_o6ywf"), ExtResource("4_lhiiy"), ExtResource("5_yb0lo"), ExtResource("6_b2rdw"), ExtResource("7_mmg7h"), ExtResource("8_cnxe7"), ExtResource("9_vcqbx"), ExtResource("10_kpexq"), ExtResource("11_na7y1"), ExtResource("12_041iu")])
+metadata/_custom_type_script = "uid://ck5qluy7mnfn6"

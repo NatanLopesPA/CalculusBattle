@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://2vsapj5gknng"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_ac6yb"]
+
+[resource]
+script = ExtResource("1_ac6yb")
+question_info = "Tesla quer chegar a 20. Ele está no 5 e pula de 5 em 5. Quantos pulos ele precisa dar? (Não conte o 5)"
+type = 2
+options = Array[String](["5 pulos", "4 pulos", "3 pulos", "2 pulos"])
+correct = "3 pulos"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

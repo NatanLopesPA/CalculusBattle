@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://dq4f7ig2ymdb2"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_5e5lh"]
+
+[resource]
+script = ExtResource("1_5e5lh")
+question_info = "Começando no 100 e tirando 5 a cada vez, qual o terceiro número?"
+type = 1
+options = Array[String](["95", "99", "90", "85"])
+correct = "90"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

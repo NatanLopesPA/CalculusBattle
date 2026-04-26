@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlbdfgcy8hwmt"]
+
+[ext_resource type="Script" uid="uid://b0q0yvqd26i0w" path="res://Cenas/InfoCharacters/InfoCharactersMULT/info_characters_mult.gd" id="1_kw0ee"]
+[ext_resource type="Texture2D" uid="uid://bg8g0vfi6xr7g" path="res://Assets Calculus Battle/SheetCharacter/Fibonacci_Background.png" id="2_qimor"]
+[ext_resource type="Shader" uid="uid://bt567ifhh1707" path="res://Cenas/InfoCharacters/InfoCharactersMULT/info_charactersMULT.gdshader" id="3_gum7b"]
+[ext_resource type="Texture2D" uid="uid://2q6exey7qohv" path="res://Assets Calculus Battle/SheetCharacter/SheetCharacter.png" id="4_8tw0q"]
+[ext_resource type="Texture2D" uid="uid://dj85a71aenbyh" path="res://Assets Calculus Battle/SheetCharacter/Fibonacci.png" id="4_ssnjc"]
+[ext_resource type="AudioStream" uid="uid://bsaanl62fklmc" path="res://Assets Calculus Battle/Audio/Typing-Sound-Effect-_no-copyright_.mp3" id="6_ku76f"]
+[ext_resource type="AudioStream" uid="uid://cgagq65a1k58b" path="res://Assets Calculus Battle/Audio/Undertale-Papyrus-Theme-Song-Bonetrousle.mp3" id="7_5w3fi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_olq1q"]
+shader = ExtResource("3_gum7b")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 1.0
+
+[node name="InfoCharactersMULT" type="CanvasLayer"]
+script = ExtResource("1_kw0ee")
+
+[node name="Fibonacci_Background" type="Sprite2D" parent="."]
+position = Vector2(112.00001, 111.63637)
+scale = Vector2(0.17333333, 0.20939252)
+texture = ExtResource("2_qimor")
+
+[node name="Fibonacci" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_olq1q")
+position = Vector2(70.5, 145.75002)
+scale = Vector2(0.06544503, 0.0679663)
+texture = ExtResource("4_ssnjc")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.022000002
+anchor_right = 0.022000002
+offset_left = 135.816
+offset_top = 16.0
+offset_right = 279.816
+offset_bottom = 200.0
+color = Color(0, 0, 0, 1)
+
+[node name="SheetCharacter" type="Sprite2D" parent="."]
+position = Vector2(76, 112)
+scale = Vector2(0.15, 0.358)
+texture = ExtResource("4_8tw0q")
+
+[node name="Story" type="Label" parent="."]
+offset_left = 154.0
+offset_top = 17.0
+offset_right = 372.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 8
+text = "Fibonacci
+Sua \"Centelha da Ideia\" foi roubada pelo vilão.
+A Harmonia da Proporção Áurea.
+Agora, sua mente se corrompe e foca apenas na
+Obessão da Expansão infinita.
+
+Ele se torna O Tirano da Espiral.
+Criando \"Autômatos da Proporção\";
+Contaminando a realidade, fundindo metal e carne.
+Crescendo então uma fortaleza-fábrica descontrolada;
+Como um organismo vivo que se enrola sobre si mesmo.
+Tesla o encontra no coração dessa estrutura
+Convertendo o mundo em uma grande Espiral de Metal."
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.022000002
+anchor_right = 0.022000002
+offset_left = -8.184001
+offset_top = 224.0
+offset_right = 135.816
+offset_bottom = 312.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioText" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ku76f")
+volume_db = -9.412
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_5w3fi")
+volume_db = -25.0
+autoplay = true

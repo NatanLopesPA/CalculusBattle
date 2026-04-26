@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://drdr0a8wcb3fx"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_y4i7m"]
+
+[resource]
+script = ExtResource("1_y4i7m")
+question_info = "Se o 1º número é 0 e o 5º é 20, de quanto em quanto a sequência sobe?"
+type = 3
+options = Array[String](["2 em 2", "4 em 4", "5 em 5", "10 em 10"])
+correct = "5 em 5"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

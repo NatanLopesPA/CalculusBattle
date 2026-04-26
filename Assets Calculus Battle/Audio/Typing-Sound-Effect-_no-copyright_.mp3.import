@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsaanl62fklmc"
+path="res://.godot/imported/Typing-Sound-Effect-_no-copyright_.mp3-5932e6fcf96c9275a1d8f99348b2a94f.mp3str"
+
+[deps]
+
+source_file="res://Assets Calculus Battle/Audio/Typing-Sound-Effect-_no-copyright_.mp3"
+dest_files=["res://.godot/imported/Typing-Sound-Effect-_no-copyright_.mp3-5932e6fcf96c9275a1d8f99348b2a94f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

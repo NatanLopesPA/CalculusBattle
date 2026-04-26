@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://xpg3q4quvh1y"]
+
+[ext_resource type="Script" uid="uid://nfcjntqwfy0e" path="res://Scripts/entitys/player.gd" id="1_qkokl"]
+[ext_resource type="Texture2D" uid="uid://draxtf4d4q7gy" path="res://Assets Calculus Battle/Sprites/Nikola Tesla Sprite.png" id="2_jeb5w"]
+[ext_resource type="Texture2D" uid="uid://lc4y86wnsahc" path="res://Assets Calculus Battle/Hearts/heart_animated_2.png" id="3_xwgvr"]
+[ext_resource type="Texture2D" uid="uid://ba106v13t0tsd" path="res://Assets Calculus Battle/Sprites Icons/Nikola Tesla ICON.png" id="4_3djb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k6h6"]
+size = Vector2(50, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0mhk"]
+atlas = ExtResource("3_xwgvr")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwqu2"]
+atlas = ExtResource("3_xwgvr")
+region = Rect2(17, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkb1f"]
+atlas = ExtResource("3_xwgvr")
+region = Rect2(34, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wudov"]
+atlas = ExtResource("3_xwgvr")
+region = Rect2(51, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js5op"]
+atlas = ExtResource("3_xwgvr")
+region = Rect2(68, 0, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ew46v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0mhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwqu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkb1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wudov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js5op")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=433373362]
+position = Vector2(17, 8)
+script = ExtResource("1_qkokl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=631851576]
+position = Vector2(6.999998, -7.999999)
+scale = Vector2(0.1908397, 0.17766498)
+texture = ExtResource("2_jeb5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=582850630]
+position = Vector2(7, -7.5)
+shape = SubResource("RectangleShape2D_7k6h6")
+
+[node name="Heart_3Player" type="AnimatedSprite2D" parent="." unique_id=505226303]
+position = Vector2(32, -73)
+sprite_frames = SubResource("SpriteFrames_ew46v")
+
+[node name="Heart_2Player" type="AnimatedSprite2D" parent="." unique_id=338381647]
+position = Vector2(-4, -90)
+sprite_frames = SubResource("SpriteFrames_ew46v")
+
+[node name="Heart_1Player" type="AnimatedSprite2D" parent="." unique_id=77649448]
+position = Vector2(20, -90)
+sprite_frames = SubResource("SpriteFrames_ew46v")
+
+[node name="PlayerIcon" type="Sprite2D" parent="." unique_id=206747630]
+position = Vector2(-41.749992, -78.1875)
+scale = Vector2(0.33928573, 0.34186742)
+texture = ExtResource("4_3djb2")
+
+[node name="Heart_4Player" type="AnimatedSprite2D" parent="." unique_id=1427202593]
+position = Vector2(8, -73)
+sprite_frames = SubResource("SpriteFrames_ew46v")
+
+[node name="Heart_5Player" type="AnimatedSprite2D" parent="." unique_id=372360557]
+position = Vector2(-16, -73)
+sprite_frames = SubResource("SpriteFrames_ew46v")

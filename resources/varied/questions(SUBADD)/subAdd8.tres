@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://csk6t0ajn6mkb"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_cn573"]
+
+[resource]
+script = ExtResource("1_cn573")
+question_info = "Complete a sequência: (8, 16, __, 32)."
+type = 1
+options = Array[String](["20", "22", "24", "30"])
+correct = "24"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

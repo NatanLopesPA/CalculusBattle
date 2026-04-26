@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://ddb2p8y5hdo6e"]
+
+[ext_resource type="Script" uid="uid://b5wd54l3ykuhw" path="res://Scripts/resources/question.gd" id="1_rdgaw"]
+
+[resource]
+script = ExtResource("1_rdgaw")
+question_info = "Um motor vibra em (10, 12, 14...). Qual a vibração no 5º passo?"
+type = 1
+options = Array[String](["17", "16", "18", "20"])
+correct = "18"
+metadata/_custom_type_script = "uid://b5wd54l3ykuhw"

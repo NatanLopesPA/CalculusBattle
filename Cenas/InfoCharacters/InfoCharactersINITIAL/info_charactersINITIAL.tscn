@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bptrkvccebrww"]
+
+[ext_resource type="Script" uid="uid://bj5gp536ls4cd" path="res://Cenas/InfoCharacters/InfoCharactersINITIAL/info_characters_initial.gd" id="1_581pq"]
+[ext_resource type="Texture2D" uid="uid://dhx1cidp3xofo" path="res://Assets Calculus Battle/SheetCharacter/Nikola Tesla.png" id="2_usqu0"]
+[ext_resource type="Texture2D" uid="uid://2q6exey7qohv" path="res://Assets Calculus Battle/SheetCharacter/SheetCharacter.png" id="3_l4as8"]
+[ext_resource type="AudioStream" uid="uid://bsaanl62fklmc" path="res://Assets Calculus Battle/Audio/Typing-Sound-Effect-_no-copyright_.mp3" id="4_ofysh"]
+[ext_resource type="AudioStream" uid="uid://cgagq65a1k58b" path="res://Assets Calculus Battle/Audio/Undertale-Papyrus-Theme-Song-Bonetrousle.mp3" id="5_ior6i"]
+
+[node name="InfoCharactersADD" type="CanvasLayer"]
+script = ExtResource("1_581pq")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+position = Vector2(76, 109.855644)
+scale = Vector2(0.18528612, 0.1592869)
+texture = ExtResource("2_usqu0")
+
+[node name="SheetCharacter" type="Sprite2D" parent="."]
+position = Vector2(76, 112.058)
+scale = Vector2(0.15, 0.358)
+texture = ExtResource("3_l4as8")
+
+[node name="Story" type="Label" parent="."]
+offset_left = 154.0
+offset_top = 1.0
+offset_right = 370.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 8
+text = "Nikola Tesla, o \"Filho da Luz\". 
+Ele dedicou sua existência para desvendar tudo;
+Conectando o mundo através da Torre de Wardenclyffe.
+No entanto, Thomas Edison interferiu.
+O vilão roubou a \"Centelha da Frequência\"
+Condenando a humanidade ao atraso
+
+Mas onde outros veriam o fim,
+O maior cientista da história viu um desafio. 
+Recusando-se a aceitar a \"incompletude\" do vilão; 
+Tesla cria o Super Autômato β.
+Uma armadura movida a raios e pura esperança
+O único ser capaz de viajar pelas distorções temporais.
+Lutando para consertar as linhas do tempo e;
+Recuperar a genialidade de seus irmãos intelectuais."
+
+[node name="AudioText" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ofysh")
+volume_db = -9.412
+
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ior6i")
+volume_db = -25.0
+autoplay = true
